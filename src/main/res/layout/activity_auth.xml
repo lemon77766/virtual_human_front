@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/auth_bg_outer">
+
+    <!-- 主卡片容器 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/auth_card_bg"
+        android:elevation="4dp"
+        android:padding="24dp"
+        android:layout_margin="16dp">
+
+        <!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:contentDescription="返回"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- 头像区域 - 圆形头像，内部包含云朵图标和"小雨"文字 -->
+        <FrameLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp">
+
+            <!-- 圆形头像背景 -->
+            <ImageView
+                android:id="@+id/iv_avatar_bg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_auth_avatar"
+                android:contentDescription="头像背景" />
+
+        <!-- 应用图标（圆形），移除文本 -->
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                android:contentDescription="应用图标"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle_red"
+                android:clipToOutline="true"
+                android:adjustViewBounds="true"/>
+        </FrameLayout>
+
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auth_title"
+            android:textColor="@color/home_text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/avatar_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 副标题 -->
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auth_subtitle"
+            android:textColor="@color/home_text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 登录方式切换 -->
+        <LinearLayout
+            android:id="@+id/ll_login_mode"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_login_mode_container"
+            android:padding="6dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tab_verify_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:text="@string/auth_mode_verify_code"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/bg_auth_mode_text"
+                android:background="@drawable/bg_auth_login_mode"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tab_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:text="@string/auth_mode_password"
+                android:textColor="@color/bg_auth_mode_text"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_auth_login_mode"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- 输入表单容器 -->
+        <LinearLayout
+            android:id="@+id/form_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_login_mode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- 手机号/账号输入框 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_auth_input"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_phone_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_phone"
+                    android:contentDescription="手机"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_account"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="@string/auth_hint_phone"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/home_text_secondary"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@id/iv_phone_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 验证码输入框（验证码登录模式） -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_verify_code_input"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_auth_input"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_shield_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_shield"
+                    android:contentDescription="验证码"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_verify_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="@string/auth_hint_verify_code"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/home_text_secondary"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="8dp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@id/iv_shield_icon"
+                    app:layout_constraintEnd_toStartOf="@id/divider_verify_code"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <!-- 分隔线 -->
+                <View
+                    android:id="@+id/divider_verify_code"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="#E0E0E0"
+                    app:layout_constraintEnd_toStartOf="@id/btn_send_sms"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/btn_send_sms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_get_verify_code"
+                    android:textColor="@color/home_primary"
+                    android:textSize="13sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 密码输入框（密码登录模式） -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_auth_input"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_lock_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_lock"
+                    android:contentDescription="密码"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:hint="@string/auth_hint_password"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/home_text_secondary"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toEndOf="@id/iv_lock_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 用户协议 -->
+            <LinearLayout
+                android:id="@+id/ll_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+
+                <CheckBox
+                    android:id="@+id/cb_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/home_primary" />
+
+                <TextView
+                    android:id="@+id/tv_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_agreement_prefix"
+                    android:textColor="@color/home_text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_user_agreement"
+                    android:textColor="@color/home_primary"
+                    android:textSize="12sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_and"
+                    android:textColor="@color/home_text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_privacy_policy"
+                    android:textColor="@color/home_primary"
+                    android:textSize="12sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- 登录按钮 -->
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/auth_login"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_auth_button"
+                android:stateListAnimator="@null" />
+
+            <!-- 找回密码 -->
+            <LinearLayout
+                android:id="@+id/ll_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_question_mark"
+                    android:contentDescription="问号"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_forgot_password"
+                    android:textColor="@color/home_primary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- 分隔线：其他方式登录 -->
+            <LinearLayout
+                android:id="@+id/ll_other_login_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="32dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#E0E0E0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth_other_login"
+                    android:textColor="@color/home_text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#E0E0E0" />
+            </LinearLayout>
+
+            <!-- 第三方登录图标 -->
+            <LinearLayout
+                android:id="@+id/ll_third_party"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp">
+
+                <!-- 微信登录按钮 -->
+                <FrameLayout
+                    android:id="@+id/fl_wechat"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp"
+                    android:visibility="gone">
+                    
+                    <!-- 圆形背景 -->
+                    <ImageView
+                        android:id="@+id/iv_wechat"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bg_wechat_circle"
+                        android:scaleType="fitXY"
+                        android:contentDescription="微信登录" />
+                    
+                    <!-- 白色图标 -->
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_wechat_white"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="" />
+                </FrameLayout>
+
+                <!-- QQ登录按钮 -->
+                <FrameLayout
+                    android:id="@+id/fl_qq"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp"
+                    android:visibility="gone">
+                    
+                    <!-- 圆形背景 -->
+                    <ImageView
+                        android:id="@+id/iv_qq"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bg_qq_circle"
+                        android:scaleType="fitXY"
+                        android:contentDescription="QQ登录" />
+                    
+                    <!-- 白色图标 -->
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_qq_white"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">养老陪伴智慧虚拟人</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_title">陪伴智慧虚拟人</string>
+    <string name="splash_subtitle">24小时贴心守护·温暖相伴</string>
+    <string name="splash_loading">正在启动中...</string>
+    <string name="splash_copyright">© 2025 石家庄佳诚网络技术有限公司</string>
+
+    <!-- Guide pages -->
+    <string name="guide_action_skip">跳过</string>
+    <string name="guide_action_next">下一页</string>
+    <string name="guide_action_enter">进入</string>
+
+    <string name="guide_title_companion">智能陪伴 贴心守护</string>
+    <string name="guide_desc_companion">陪你聊天解闷，不再孤单\n随时关注生活与心情，温暖守护</string>
+
+    <string name="guide_title_enjoy_life">悦享生活 精彩无限</string>
+    <string name="guide_desc_enjoy_life">听音乐、播资讯、提醒待办\n丰富娱乐与信息服务，一键开启</string>
+
+    <string name="guide_title_community">乐享社区互动</string>
+    <string name="guide_desc_community">分享照片语音，记录生活点滴\n与家人朋友互动，让关心更贴心</string>
+
+    <!-- Bottom navigation labels -->
+    <string name="nav_label_home">首页</string>
+    <string name="nav_label_community">社区交互</string>
+    <string name="nav_label_enjoy">悦享生活</string>
+    <string name="nav_label_profile">我的</string>
+
+    <!-- Profile Center -->
+    <string name="profile_title">我的中心</string>
+    <string name="profile_emergency_label">紧急呼叫</string>
+    <string name="profile_emergency_button">拨打 120</string>
+    <string name="profile_emergency_desc">如遇突发状况，请立即拨打急救电话</string>
+    <string name="profile_help_title">使用帮助 &amp; 家人</string>
+    <string name="profile_help_desc">家人联动，守护更安心</string>
+    <string name="profile_watch_tutorial">观看视频教程</string>
+    <string name="profile_family_binding">我的家人绑定</string>
+    <string name="profile_enjoy_life">悦享生活</string>
+    <string name="profile_my_likes">我的喜欢 (%1$d)</string>
+    <string name="profile_font_size">字体大小</string>
+    <string name="profile_font_standard">标准</string>
+    <string name="profile_font_large">大</string>
+    <string name="profile_font_extra">特大</string>
+    <string name="profile_font_huge">超大</string>
+    <string name="profile_font_preview">示例文字预览</string>
+    <string name="profile_volume_tune">音量调节</string>
+    <string name="profile_notifications">消息通知</string>
+    <string name="profile_privacy">隐私设置</string>
+    <string name="profile_about_us">关于我们</string>
+    <string name="profile_logout">退出登录</string>
+    <string name="profile_logout_confirm_hint">您可以在此退出当前账号</string>
+    <string name="profile_used_days">已使用 %1$d 天</string>
+    <string name="profile_edit_profile">编辑资料</string>
+
+    <!-- Enjoy Life -->
+    <string name="enjoy_life_title">悦享生活</string>
+    <string name="tab_drama">戏剧</string>
+    <string name="tab_music">音乐</string>
+    <string name="tab_news">资讯</string>
+    <string name="drama_playing">正在播放</string>
+    <string name="drama_category_1">京剧</string>
+    <string name="drama_category_2">豫剧</string>
+    <string name="drama_category_3">黄梅戏</string>
+    <string name="drama_category_4">越剧</string>
+    <string name="drama_name_1">贵妃醉酒</string>
+    <string name="drama_name_2">花木兰</string>
+    <string name="drama_name_3">天仙配</string>
+    <string name="drama_name_4">红楼梦</string>
+    <string name="performer_1">梅兰芳</string>
+    <string name="performer_2">常香玉</string>
+    <string name="performer_3">严凤英</string>
+    <string name="performer_4">王文娟</string>
+    <string name="btn_play">播放</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_previous">上一首</string>
+    <string name="btn_next">下一首</string>
+    <string name="btn_like">收藏</string>
+    <string name="btn_unlike">取消收藏</string>
+    <string name="drama_placeholder_name">戏剧名称</string>
+    <string name="drama_placeholder_category">戏剧类别</string>
+    <string name="drama_placeholder_performer">表演者</string>
+    <string name="carousel_placeholder">轮播图占位</string>
+    <string name="carousel_cta">立即前往</string>
+    <string name="carousel_title_opera">今日戏曲精选</string>
+    <string name="carousel_title_music">晨间音乐疗愈</string>
+    <string name="carousel_title_news">文化资讯速览</string>
+    <string name="carousel_subtitle_opera">跟随国粹唱腔，沉浸式欣赏经典</string>
+    <string name="carousel_subtitle_music">舒缓国风民乐，让清晨更元气</string>
+    <string name="carousel_subtitle_news">每日热点速递，掌握最新文化活动</string>
+
+    <!-- Auth/Login page -->
+
+    <string name="auth_title">登录 / 注册</string>
+    <string name="auth_subtitle">未注册的手机号将自动创建账号</string>
+    <string name="auth_mode_verify_code">验证码登录</string>
+    <string name="auth_mode_password">密码登录</string>
+    <string name="auth_hint_phone">请输入手机号码</string>
+    <string name="auth_hint_account">请输入账号/手机号</string>
+    <string name="auth_hint_password">请输入密码</string>
+    <string name="auth_hint_verify_code">请输入验证码</string>
+    <string name="auth_get_verify_code">获取验证码</string>
+    <string name="auth_agreement_prefix">我已同意</string>
+    <string name="auth_user_agreement">《用户协议》</string>
+    <string name="auth_and">及</string>
+    <string name="auth_privacy_policy">《隐私协议》</string>
+    <string name="auth_login">登录</string>
+    <string name="auth_register">注册</string>
+    <string name="auth_forgot_password">找回密码</string>
+    <string name="auth_other_login">其他方式登录</string>
+    <string name="auth_verify_code_sent">验证码已发送</string>
+    <string name="auth_verify_code_countdown">%1$d秒后重试</string>
+    <string name="auth_agreement_required">请先阅读并同意用户协议和隐私协议</string>
+    <string name="auth_phone_required">请输入手机号</string>
+    <string name="auth_phone_invalid">请输入正确的手机号</string>
+    <string name="auth_password_required">请输入密码</string>
+    <string name="auth_verify_code_required">请输入验证码</string>
+    <string name="auth_logging_in">登录中...</string>
+
+</resources>

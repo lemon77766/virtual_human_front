@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_rounded_container"
+    android:padding="15dp"
+    android:layout_marginBottom="15dp"
+    android:elevation="1dp">
+
+    <!-- Drama cover -->
+    <ImageView
+        android:id="@+id/drama_cover"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_drama_cover" />
+
+    <!-- 戏剧信息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_drama_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/general_text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_drama_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/general_text_medium"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tv_performer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/general_text_medium"
+            android:textSize="14sp"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- 操作按钮 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="10dp">
+
+        <ImageButton
+            android:id="@+id/btn_comment"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:src="@drawable/ic_comment"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            android:contentDescription="评论" />
+
+        <ImageButton
+            android:id="@+id/btn_like"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:src="@drawable/ic_heart_outline"
+            android:layout_marginBottom="5dp"
+            android:padding="6dp"
+            android:contentDescription="收藏" />
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:src="@drawable/ic_play"
+            android:padding="6dp"
+            android:contentDescription="播放" />
+    </LinearLayout>
+
+</LinearLayout>

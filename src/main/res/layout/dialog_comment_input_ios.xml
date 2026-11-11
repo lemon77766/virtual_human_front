@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/dialog_alert_bg"
+    android:layout_margin="24dp">
+
+    <TextView
+        android:id="@+id/ios_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发表评论"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/home_text_primary"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/ios_input_edit"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:minLines="2"
+        android:maxLines="4"
+        android:hint="写评论..."
+        android:inputType="textMultiLine"
+        android:backgroundTint="@color/home_text_secondary"
+        android:padding="8dp"
+        android:textColor="@color/home_text_primary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/ios_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="@color/home_text_secondary"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/ios_btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textColor="@color/enjoy_life_tab_text_selected"
+            android:padding="8dp"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+

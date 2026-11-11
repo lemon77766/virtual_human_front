@@ -1,0 +1,10 @@
+.gladle/
+.gradle/
+/build/
+*/build/
+*.apk
+*.ap_*
+*.dex
+*.jar
+.idea/
+local.properties

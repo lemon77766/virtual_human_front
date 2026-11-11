@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // jcenter() 已关闭，不再使用
+        // 如果需要ijkplayer相关依赖，请使用其他仓库或本地aar
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+rootProject.name = "demo"

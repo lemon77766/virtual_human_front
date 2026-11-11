@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rounded_white"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择位置"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/general_text_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Current location section -->
+            <LinearLayout
+                android:id="@+id/current_location_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前位置"
+                    android:textSize="14sp"
+                    android:textColor="@color/general_accent_red"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:id="@+id/current_location_item"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/general_accent_red" />
+                    <TextView
+                        android:id="@+id/tv_current_location"
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="正在获取..." />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Common locations section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="常用地点"
+                android:textSize="14sp"
+                android:textColor="@color/general_text_medium"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/location_xingfu"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/profile_accent_blue" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="幸福社区" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_gongyuan"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/profile_accent_green" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="公园" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_caishichang"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/icon_elder_brown" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="菜市场" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_yiyuan"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/general_accent_red" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="医院" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_yinhang"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/icon_wisdom_gold" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="银行" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_chaoshi"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/icon_heart_pink" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="超市" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_guagchang"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/icon_warm_beige" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="小区广场" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_huodong"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/profile_accent_orange" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="老年活动中心" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/location_qita"
+                    style="@style/LocationSelectorItemStyle">
+                    <ImageView
+                        style="@style/LocationSelectorIconStyle"
+                        android:src="@drawable/ic_location"
+                        android:tint="@color/general_text_medium" />
+                    <TextView
+                        style="@style/LocationSelectorTextStyle"
+                        android:text="其他地点" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/profile_divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_location_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="取消"
+        android:textColor="@color/general_text_medium"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
+
+
+
+
+
+
+

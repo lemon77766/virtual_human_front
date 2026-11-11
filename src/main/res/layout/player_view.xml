@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:elevation="5dp">
+
+    <!-- 当前播放信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_current_drama_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="贵妃醉酒"
+            android:textColor="#212529"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_current_drama_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="京剧"
+            android:textColor="#6C757D"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp" />
+
+        <Button
+            android:id="@+id/btn_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_heart_outline"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+    <!-- 播放控制按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/btn_previous"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_skip_previous"
+            android:layout_marginRight="30dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btn_play_pause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_play"
+            android:layout_marginHorizontal="30dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_skip_next"
+            android:layout_marginLeft="30dp"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+</LinearLayout>

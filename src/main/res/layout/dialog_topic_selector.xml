@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rounded_white"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择话题"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/general_text_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:id="@+id/topic_shaihua"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/general_accent_red" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#今日晒花" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topic_meishi"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/profile_accent_orange" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#美食分享" />
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:id="@+id/topic_yundong"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/profile_accent_green" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#运动健身" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topic_dushu"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/icon_wisdom_gold" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#读书笔记" />
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:id="@+id/topic_lvxing"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/profile_accent_blue" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#旅行记录" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topic_shougong"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/icon_heart_pink" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#手工DIY" />
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:id="@+id/topic_chongwu"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/icon_warm_beige" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#宠物日常" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topic_shishang"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/icon_elder_brown" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#时尚穿搭" />
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout
+            android:id="@+id/topic_keji"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/icon_virtual_blue" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#科技数码" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topic_qita"
+            style="@style/TopicSelectorItemStyle">
+            <ImageView
+                style="@style/TopicSelectorIconStyle"
+                android:src="@drawable/ic_hashtag"
+                android:tint="@color/general_text_medium" />
+            <TextView
+                style="@style/TopicSelectorTextStyle"
+                android:text="#其他话题" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/profile_divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_topic_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="取消"
+        android:textColor="@color/general_text_medium"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
+
+
+
+
+
+
+

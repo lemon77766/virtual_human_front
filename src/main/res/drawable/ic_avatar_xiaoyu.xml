@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- 小雨头像 - 云朵图标（简化版，用于登录页） -->
+    <!-- 云朵主体 -->
+    <path
+        android:fillColor="#B8E6FF"
+        android:pathData="M24,12 Q30,9 36,12 Q38,14 38,17 Q40,17 40,19 Q40,21 38,21 Q38,24 36,26 Q30,29 24,26 Q18,29 12,26 Q10,24 10,21 Q8,21 8,19 Q8,17 10,17 Q10,14 12,12 Q18,9 24,12 Z"/>
+    <!-- 云朵高光 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.4"
+        android:pathData="M24,12 Q27,10 30,12 Q29,15 24,15 Q20,15 20,12 Q22,10 24,12 Z"/>
+    <!-- 小雨滴 -->
+    <path
+        android:fillColor="#5BA0F2"
+        android:pathData="M16,26 L17,30 L15,30 Z"/>
+    <path
+        android:fillColor="#5BA0F2"
+        android:pathData="M24,27 L25,31 L23,31 Z"/>
+    <path
+        android:fillColor="#5BA0F2"
+        android:pathData="M32,26 L33,30 L31,30 Z"/>
+</vector>

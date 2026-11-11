@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:shareInterpolator="true">
+    
+    <!-- 左右摇摆动画 - 以底部中心为轴心 -->
+    <translate
+        android:fromXDelta="-8%"
+        android:toXDelta="8%"
+        android:duration="2000"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse" />
+    
+    <!-- 旋转动画 - 轻微旋转，以底部中心为轴心 -->
+    <rotate
+        android:fromDegrees="-5"
+        android:toDegrees="5"
+        android:pivotX="50%"
+        android:pivotY="100%"
+        android:duration="2500"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse" />
+    
+</set>
+
+

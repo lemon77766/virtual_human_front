@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 顶部背景 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background1">
+
+            <ImageView
+                android:id="@+id/btn_back_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/ic_back"
+                android:background="@drawable/bg_icon_button"
+                android:padding="6dp"
+                android:layout_gravity="top|start"/>
+        </FrameLayout>
+
+        <!-- 个人信息卡 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="16dp"
+            android:layout_marginTop="-40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/profile_avatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/laoren1"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_profile_avatar"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张大爷"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#333"/>
+
+                    <TextView
+                        android:id="@+id/profile_bio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="热爱生活，喜欢养花、听戏。退休教师。社区里的老顽童。"
+                        android:textSize="14sp"
+                        android:textColor="#666"
+                        android:layout_marginTop="6dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_follow_profile"
+                    android:layout_width="72dp"
+                    android:layout_height="36dp"
+                    android:text="+ 关注"
+                    android:textColor="#fff"
+                    android:background="@drawable/bg_circle_primary"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="128" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关注" android:textSize="12sp" android:textColor="#999"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="356" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="粉丝" android:textSize="12sp" android:textColor="#999"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.2k" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获赞" android:textSize="12sp" android:textColor="#999"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Tabs -->
+        <LinearLayout
+            android:id="@+id/profile_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/tab_dynamic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="动态"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#ff4757"/>
+
+            <TextView
+                android:id="@+id/tab_album"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="相册"
+                android:textSize="15sp"
+                android:textColor="#666"/>
+
+            <TextView
+                android:id="@+id/tab_likes"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="喜欢"
+                android:textSize="15sp"
+                android:textColor="#666"/>
+        </LinearLayout>
+
+        <!-- Content area -->
+        <LinearLayout
+            android:id="@+id/profile_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Dynamic list (simple static items) -->
+            <LinearLayout
+                android:id="@+id/content_dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@android:color/white"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="19" android:textSize="20sp" android:textStyle="bold" android:textColor="#333" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12月" android:textSize="12sp" android:textColor="#999"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今天公园里的花开得真好，心情舒畅！" android:textSize="15sp" android:textColor="#333"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Album content -->
+            <LinearLayout
+                android:id="@+id/content_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="相册示例" android:textSize="16sp" android:padding="8dp"/>
+            </LinearLayout>
+
+            <!-- Likes content -->
+            <LinearLayout
+                android:id="@+id/content_likes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="喜欢示例" android:textSize="16sp" android:padding="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+

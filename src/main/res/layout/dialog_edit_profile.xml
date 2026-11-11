@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改个人信息"
+            android:textColor="@color/profile_text_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="@color/profile_text_subtle"
+            android:contentDescription="关闭" />
+    </RelativeLayout>
+
+    <!-- Avatar Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_profile_avatar"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/img_dialog_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile_avatar_placeholder" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btn_edit_avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/bg_profile_icon_circle"
+            android:backgroundTint="@color/profile_icon_bg_blue"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:tint="@color/profile_accent_red"
+            android:contentDescription="编辑头像" />
+    </RelativeLayout>
+
+    <!-- Form Fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称（App显示名）"
+            android:textColor="@color/profile_text_subtle"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_profile_input"
+            android:padding="12dp"
+            android:textColor="@color/profile_text_title"
+            android:textSize="15sp"
+            android:hint="请输入昵称"
+            android:textColorHint="@color/profile_text_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真实姓名"
+            android:textColor="@color/profile_text_subtle"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_real_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_profile_input"
+            android:padding="12dp"
+            android:textColor="@color/profile_text_title"
+            android:textSize="15sp"
+            android:hint="请输入真实姓名"
+            android:textColorHint="@color/profile_text_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出生年月日"
+            android:textColor="@color/profile_text_subtle"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_profile_input"
+                android:padding="12dp"
+                android:textColor="@color/profile_text_title"
+                android:textSize="15sp"
+                android:hint="YYYY/MM/DD"
+            android:textColorHint="@color/profile_text_hint"
+            android:focusable="false"
+                android:clickable="true" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:tint="@color/profile_text_subtle"
+                android:contentDescription="选择日期" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号（账号）"
+            android:textColor="@color/profile_text_subtle"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_profile_input"
+            android:padding="12dp"
+            android:textColor="@color/profile_text_subtle"
+            android:textSize="15sp"
+            android:hint="138****8888"
+            android:textColorHint="@color/profile_text_hint"
+            android:editable="false"
+            android:focusable="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置密码"
+            android:textColor="@color/profile_text_subtle"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_profile_input"
+            android:padding="12dp"
+            android:textColor="@color/profile_text_title"
+            android:textSize="15sp"
+            android:hint="输入新密码（不设请留空）"
+            android:textColorHint="@color/profile_text_hint"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btn_save_changes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_profile_emergency_button"
+        android:text="保存修改"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+</LinearLayout>

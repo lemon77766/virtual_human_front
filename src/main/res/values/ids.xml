@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IDs used as keys for view tags and handlers -->
+    <item name="tag_media_player" type="id" />
+    <item name="tag_thumb_handler" type="id" />
+</resources>
+
+
+
+
+
+
+
+
+
+

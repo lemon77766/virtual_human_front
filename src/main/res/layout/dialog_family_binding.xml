@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="24dp">
+
+    <!-- Centered white card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_rounded_white"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/iv_family_qr"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:src="@drawable/erweima"
+            android:contentDescription="家人绑定二维码"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_family_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="欢迎使用家人绑定功能"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_close_family"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:text="关闭" />
+
+    </LinearLayout>
+
+</FrameLayout>
+
+

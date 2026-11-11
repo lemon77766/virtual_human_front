@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- 简化的老年人形象 - 左侧 -->
+    <path
+        android:fillColor="#FF8C7A"
+        android:pathData="M30,25 C26,23 24,20 24,17 C24,14 26,11 28,10 C31,8 34,8 36,10 C38,11 40,14 40,17 C40,20 38,23 35,25 C33,27 31,30 31,33 L31,42 C31,43 32,44 33,45 L35,46" />
+    
+    <!-- 简化的老年人头部 -->
+    <circle
+        android:fillColor="#FF8C7A"
+        android:pathData="M30,17 A3,3 0,1,1 30,17 A3,3 0,1,1 30,17 Z" />
+    
+    <!-- 微笑 -->
+    <path
+        android:strokeColor="#FF6B6B"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M27,19 Q30,21 33,19" />
+    
+    <!-- 简化的虚拟人 - 右侧半透明 -->
+    <path
+        android:fillColor="#4A90E2"
+        android:fillAlpha="0.7"
+        android:pathData="M65,20 L70,15 L75,20 L75,32 C75,36 73,38 70,40 C67,38 65,36 65,32 Z" />
+    
+    <!-- 虚拟人头部 -->
+    <circle
+        android:fillColor="#4A90E2"
+        android:fillAlpha="0.8"
+        android:pathData="M70,17 A2.5,2.5 0,1,1 70,17 A2.5,2.5 0,1,1 70,17 Z" />
+    
+    <!-- 连接线条 -->
+    <path
+        android:fillColor="#FFD700"
+        android:fillAlpha="0.8"
+        android:pathData="M35,46 L45,48 L55,50 L65,48" />
+    
+    <!-- 连接点光晕 -->
+    <circle
+        android:fillColor="#FFED4E"
+        android:fillAlpha="1.0"
+        android:pathData="M50,48 A1.5,1.5 0,1,1 50,48 A1.5,1.5 0,1,1 50,48 Z" />
+    
+    <!-- 简单的生活气息装饰 -->
+    <circle
+        android:fillColor="#87CEEB"
+        android:fillAlpha="0.4"
+        android:pathData="M20,45 A1,1 0,1,1 20,45 A1,1 0,1,1 20,45 Z" />
+    <circle
+        android:fillColor="#98FB98"
+        android:fillAlpha="0.4"
+        android:pathData="M85,30 A1,1 0,1,1 85,30 A1,1 0,1,1 85,30 Z" />
+    
+</vector>

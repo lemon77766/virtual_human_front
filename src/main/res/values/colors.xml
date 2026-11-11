@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- Home page palette -->
+    <color name="home_bg">#FBF7F2</color>
+    <color name="home_primary">#FF5A5F</color>
+    <color name="home_title">#FF4757</color>
+    <color name="home_text_primary">#222222</color>
+    <color name="home_text_secondary">#7A7A7A</color>
+    <color name="home_chip_bg">#FFF0F0</color>
+    <!-- Prompt/background for quick tips -->
+    <color name="home_prompt_bg">#FBF7F2</color>
+
+    <!-- Splash screen palette -->
+    <color name="splash_bg_outer">#F5F5F5</color>
+    <color name="splash_bg_inner">#FFFBF9</color>
+    <color name="splash_logo_bg">#FF6B6B</color>
+    <color name="splash_title_color">#FF8C42</color>
+    <color name="splash_subtitle_color">#666666</color>
+    <color name="splash_progress_color">#FF6B6B</color>
+    <color name="splash_progress_track">#E0E0E0</color>
+    <color name="splash_loading_text">#666666</color>
+    <color name="splash_copyright">#999999</color>
+    <!-- App icon colors -->
+    <color name="icon_background_warm">#FFF8F0</color>
+    <color name="icon_virtual_glow">#4A90E2</color>
+    <color name="icon_person_fill">#FF8C7A</color>
+    <color name="icon_connection_line">#FFD700</color>
+    
+    <!-- New陪伴主题色彩 -->
+    <color name="icon_elder_brown">#8B7355</color>
+    <color name="icon_virtual_blue">#5BA0F2</color>
+    <color name="icon_heart_pink">#FFB6C1</color>
+    <color name="icon_wisdom_gold">#FFD700</color>
+    <color name="icon_warm_beige">#DEB887</color>
+
+    <!-- Navigation label colors -->
+    <color name="nav_label_selected">#F66C6C</color>
+
+
+
+
+    <!-- Profile palette -->
+    <color name="profile_bg">#FFF8F5</color>
+    <color name="profile_card_bg">#FFFFFF</color>
+    <color name="profile_accent_red">#FF5F6B</color>
+    <color name="profile_accent_orange">#FFB47B</color>
+    <color name="profile_accent_blue">#6DB7FF</color>
+    <color name="profile_accent_green">#63CE8A</color>
+    <color name="profile_text_title">#1E1E1E</color>
+    <color name="profile_text_subtle">#8A8A8A</color>
+    <color name="profile_divider">#F0E6E6</color>
+    <color name="profile_logout">#FF6F6F</color>
+    <color name="profile_icon_bg_pink">#FFE4EA</color>
+    <color name="profile_icon_bg_orange">#FFEAD8</color>
+    <color name="profile_icon_bg_blue">#E6F1FF</color>
+    <color name="profile_icon_bg_green">#E6F8ED</color>
+    <color name="profile_text_hint">#C8C8C8</color>
+
+
+
+    <!-- Auth/Login page colors -->
+    <color name="auth_mode_text_selected">#FFFFFF</color>
+    <color name="auth_bg_outer">#F5F5F5</color>
+    <color name="auth_card_bg">#FFFFFF</color>
+
+    <!-- Enjoy Life page colors -->
+    <color name="enjoy_life_tab_selected">#FF6B6B</color>
+    <color name="enjoy_life_tab_unselected">#E0E0E0</color>
+    <color name="enjoy_life_tab_text_selected">#FFFFFF</color>
+    <color name="enjoy_life_tab_text_unselected">#666666</color>
+    <color name="enjoy_life_title">#FF6B6B</color>
+    <color name="enjoy_life_carousel_bg">#FF6B6B</color>
+    <color name="enjoy_life_carousel_dot_selected">#FFFFFF</color>
+    <color name="enjoy_life_carousel_dot_unselected">#FFD7D7</color>
+    <color name="player_background">#FF6B6B</color>
+    <color name="player_subtitle">#FFD7D7</color>
+    <color name="drama_item_bg">#FFFFFF</color>
+    <color name="drama_item_title">#222222</color>
+    <color name="drama_item_category">#7A7A7A</color>
+    <!-- Tag colors -->
+    <color name="tag_bg_light">#FFF3E0</color>
+    <color name="tag_text_orange">#FF6B3F</color>
+    <!-- General colors -->
+    <color name="general_text_dark">#212529</color>
+    <color name="general_text_medium">#6C757D</color>
+    <color name="general_accent_red">#FF6B6B</color>
+
+
+</resources>
